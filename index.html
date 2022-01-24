@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Library Tutorials - Pac-man</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=.9, maximum-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="libs/createjs-2015.11.26.min.js"></script> 
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+      SystemJS.config({
+        baseURL: './app'
+      });
+      System.defaultJSExtensions = true;
+      System.import('Game').then(function(module) {
+        var manifest = [];
+        manifest = [
+               { src: "app/assets/AssetsSpritesheet.json", id: "iAssets", type: createjs.AbstractLoader.SPRITESHEET },
+               { src: "app/assets/PacmanSpritesheet.json", id: "pacman", type: createjs.AbstractLoader.SPRITESHEET },
+               { src: "app/assets/maze.png", id: "maze" }, 
+               { src: "app/assets/pellet.png", id:"pellet"},
+               { src: "app/assets/sounds/pacman_beginning.mp3", type: createjs.AbstractLoader.SOUND, id: "intro"},
+               { src: "app/assets/sounds/PacmanWaka01.mp3", type: createjs.AbstractLoader.SOUND, id: "chomp"}, 
+               { src: "app/assets/sounds/eat_snippet.mp3", type: createjs.AbstractLoader.SOUND, id: "snippet"}, 
+               { src: "app/assets/sounds/pacman_death.mp3", type: createjs.AbstractLoader.SOUND, id: "error"}, 
+               { src: "app/assets/sounds/pacman_intermission.mp3", type: createjs.AbstractLoader.SOUND, id: "correct"}
+        ];
+
+        new module.Game(manifest);
+      }
+      ).catch(function(err){ console.error(err); });
+    </script>
+  </head>
+  <!-- 3. Display the application -->
+  <body>
+    <div class="naitlogo"></div>
+    <div id="content">
+      <div id="loader"></div>
+      <canvas id="canvas" width="913" height="680">Loading...</canvas>  
+    </div> 
+    
+  </body>
+</html>

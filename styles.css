@@ -1,0 +1,35 @@
+/* Master Styles */
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body {
+  margin: 2em;
+  background-color: #1b1a1a;
+  position: relative;
+}
+#canvas {
+  background-color: #1b1a1a;
+}
+
+#content{
+  display: block;
+  text-align: center;
+}
+
+.naitlogo {
+  top: 0px;
+  left: 0px;
+  width: 37px;
+  height: 50px;
+  position: absolute;
+  z-index: 100;
+  background-image: url("assets/images/naitlogo.png");
+  background-repeat: no-repeat;
+}

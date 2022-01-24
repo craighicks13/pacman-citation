@@ -1,0 +1,22 @@
+{
+
+"images": [
+    "app/assets/PacmanSpritesheet-1.png"
+],
+
+"frames": [
+    [1, 1, 33, 33, 0, 0, 0],
+    [36, 1, 30, 33, 0, 0, 0]
+],
+
+"animations": {
+    "character/pacman-closed": { "frames": [0] },
+    "character/pacman-open": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:1f99eaeba37e6a11a2c56f8538c0d9ff:d88ec3a02189ada332bad4d3925bfaeb:939ffc750af9c0cb9b620e418da40e49$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}
